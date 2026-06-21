@@ -9,7 +9,7 @@
 
 Adafruit_MPU6050 mpu;
 
-// NHỚ ĐỔI SỐ ĐIỆN THOẠI CỦA BẠN VÀO ĐÂY
+
 const String EMERGENCY_PHONE = "+84";
 
 SoftwareSerial sim800(2, 3);  
@@ -31,7 +31,7 @@ unsigned long impact_time;
 unsigned long alert_delay = 10000;  
 unsigned long last_sample_time = 0; 
 
-// Nhúng 2 file chức năng vào
+
 #include "network.h"
 #include "sensor.h"
 
@@ -57,7 +57,7 @@ void setup() {
 }
 
 void loop() {
-  // 1. Đọc cảm biến liên tục mỗi 50ms
+ 
   if (millis() - last_sample_time >= 50) {
     last_sample_time = millis();
     detectImpact();
